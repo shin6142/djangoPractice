@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog.apps.BlogConfig',
     "django_bootstrap5",
+    'cloudinary',
+    'cloudinary_storage',
 ]
 
 MIDDLEWARE = [
@@ -143,3 +145,11 @@ if not DEBUG:
     SECRET_KEY = os.environ['SECRET_KEY']
     import django_heroku
     django_heroku.settings(locals())
+
+CLOUDINARY_STORAGE = {
+'CLOUD_NAME': 'dooekvs1q',
+'API_KEY':'875291595528528',
+'API_SECRET': '65yGOFyR2Gdrk2LHntDabRDeXWU'
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
