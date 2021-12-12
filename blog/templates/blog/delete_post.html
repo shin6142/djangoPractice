@@ -1,6 +1,6 @@
 {% extends 'blog/base.html' %} {% block content %}
 <form method="POST" enctype="multipart/form-data">
-    {% csrf_token %} {{ insert_form.as_p}}
-    <input type="submit" value="保存" />
+    {% csrf_token %} {{ delete_form.as_p}}
+    <input type="submit" value="削除" />
 </form>
 {% endblock content %}

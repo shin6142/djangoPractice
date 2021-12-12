@@ -5,7 +5,7 @@ from .models import Post
 class PostInsertForm(forms.ModelForm):
 
     title = forms.CharField(label='タイトル')
-    content = forms.Textarea()
+    content = forms.CharField()
     is_published = forms.BooleanField(label='公開', required=False)
     image = forms.ImageField(label='画像', required=False)
 
@@ -17,6 +17,10 @@ class PostInsertForm(forms.ModelForm):
 class PostUpdateForm(forms.Form):
 
     title = forms.CharField(label='タイトル')
-    content = forms.Textarea()
+    content = forms.CharField()
     is_published = forms.BooleanField(label='公開', required=False)
     image = forms.ImageField(label='画像', required=False)
+
+
+class PostDeleteForm(forms.Form):
+    id = forms.IntegerField(widget=forms.HiddenInput)
