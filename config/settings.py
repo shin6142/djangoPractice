@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "django_bootstrap5",
     'cloudinary',
     'cloudinary_storage',
+    'sass_processor',
 ]
 
 MIDDLEWARE = [
@@ -147,9 +148,9 @@ if not DEBUG:
     django_heroku.settings(locals())
 
 CLOUDINARY_STORAGE = {
-'CLOUD_NAME': 'dooekvs1q',
-'API_KEY':'875291595528528',
-'API_SECRET': '65yGOFyR2Gdrk2LHntDabRDeXWU'
+    'CLOUD_NAME': 'dooekvs1q',
+    'API_KEY': '875291595528528',
+    'API_SECRET': '65yGOFyR2Gdrk2LHntDabRDeXWU'
 }
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
