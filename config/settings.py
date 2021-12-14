@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     "django_bootstrap5",
     'cloudinary',
     'cloudinary_storage',
-    'sass_processor',
+    'sass_processor'
 ]
 
 MIDDLEWARE = [
@@ -133,6 +133,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+SASS_PROCESSOR_ROOT = 'static'
 
 MEDIA_ROOT = BASE_DIR / "media"
 MEDIA_URL = "/media/"
