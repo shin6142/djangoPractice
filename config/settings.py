@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     "django_bootstrap5",
     'cloudinary',
     'cloudinary_storage',
-    'sass_processor'
 ]
 
 MIDDLEWARE = [
